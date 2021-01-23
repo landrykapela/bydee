@@ -1,0 +1,195 @@
+$primaryColor: #d28b8b;
+$primaryDarkColor: #c37453;
+$secondaryColor: #4c2010;
+$secondaryDarkColor: #0e0405;
+$secondaryDarkTrans: #0e04058a;
+$defaultBgColor: #ffffff;
+$defaultTextColor: $secondaryDarkColor;
+$maxWidth: 1279px;
+
+@mixin flex($dir, $jc, $ai, $wrap) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jc;
+  align-items: $ai;
+  @if $wrap == 1 {
+    max-width: $maxWidth;
+    flex-wrap: wrap;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.logo {
+  width: 10%;
+  padding: 0.5em 1em;
+}
+header {
+  @include flex(row, space-between, center, 0);
+  padding: 0.5em 1em;
+  width: calc(100% - 2em);
+}
+.top-nav {
+  @include flex(row, space-evenly, center, 0);
+}
+.top-nav span {
+  text-transform: uppercase;
+  color: $primaryDarkColor;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+.top-nav span:hover {
+  color: $primaryColor;
+  border-bottom: 1px solid $primaryColor;
+}
+.button {
+  width: 100px;
+  padding: 0.5em 1em;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+#home_contact {
+  text-transform: unset;
+}
+main {
+  padding: 0.5em 1em;
+  width: calc(100% - 2em);
+  margin: 0 auto;
+}
+.feature-product {
+  @include flex(column, center, center, 0);
+  background-image: url("../img/wine.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.feature-product > span {
+  z-index: 9999999999999;
+}
+.overlay-feature {
+  position: absolute;
+  background-color: $secondaryDarkTrans;
+}
+.overlay-feature,
+.feature-product {
+  height: 500px;
+  width: calc(100% - 2em);
+}
+.overlay-feature {
+  width: calc(100% - 5em);
+}
+.big-text {
+  font-size: xx-large;
+  padding: 0.75em 0.25em;
+}
+.primary-text {
+  color: $primaryColor;
+}
+.primary-bg {
+  background-color: $primaryColor;
+  color: $defaultBgColor;
+}
+.primary-bg:hover {
+  background-color: $primaryDarkColor;
+}
+.attribute {
+  margin: 1em auto;
+  width: calc(80% - 2em);
+  text-align: center;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid $secondaryColor;
+}
+.attr-title {
+  text-transform: uppercase;
+  color: $primaryDarkColor;
+  font-size: medium;
+  font-weight: 300;
+  padding: 0.5em 0;
+}
+.attr-description {
+  font-size: x-large;
+  font-weight: 300;
+  color: $secondaryDarkColor;
+}
+.description {
+  font-weight: medium;
+  padding: 1em;
+}
+.light-default-text {
+  color: $defaultBgColor;
+}
+.feature-img,
+.feature-img2 {
+  display: block;
+  width: 50%;
+  height: 400px;
+}
+.feature-img {
+  background-image: url("../img/wine_opener.jpeg");
+}
+.feature-img2 {
+  background-image: url("../img/wine_opener2.jpg");
+}
+.feature-description {
+  width: calc(50% - 2em);
+  padding: 1em 2em 1em 0;
+  //   margin-left: -3000px;
+}
+.feature-description-opp {
+  width: calc(50% - 2em);
+  padding: 1em 0em 1em 2em;
+}
+.more-feature {
+  @include flex(row, center, center, 0);
+  margin: 1em auto;
+  width: calc(80% - 2em);
+}
+.hidden {
+  display: none;
+}
+.slide_left {
+  animation: slideLeft;
+}
+.slide_right {
+  animation: slideRight;
+}
+.fade_in {
+  animation: fadeIn;
+}
+.slide_left,
+.slide_right,
+.fade_in {
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes slideLeft {
+  from {
+    margin-right: -1000px;
+  }
+  to {
+    margin-right: 0;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    margin-left: -1000px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

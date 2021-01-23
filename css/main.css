@@ -1,0 +1,223 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.logo {
+  width: 10%;
+  padding: 0.5em 1em;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1em;
+  width: calc(100% - 2em);
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.top-nav span {
+  text-transform: uppercase;
+  color: #c37453;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+.top-nav span:hover {
+  color: #d28b8b;
+  border-bottom: 1px solid #d28b8b;
+}
+
+.button {
+  width: 100px;
+  padding: 0.5em 1em;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+#home_contact {
+  text-transform: unset;
+}
+
+main {
+  padding: 0.5em 1em;
+  width: calc(100% - 2em);
+  margin: 0 auto;
+}
+
+.feature-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/wine.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.feature-product > span {
+  z-index: 9999999999999;
+}
+
+.overlay-feature {
+  position: absolute;
+  background-color: #0e04058a;
+}
+
+.overlay-feature,
+.feature-product {
+  height: 500px;
+  width: calc(100% - 2em);
+}
+
+.overlay-feature {
+  width: calc(100% - 5em);
+}
+
+.big-text {
+  font-size: xx-large;
+  padding: 0.75em 0.25em;
+}
+
+.primary-text {
+  color: #d28b8b;
+}
+
+.primary-bg {
+  background-color: #d28b8b;
+  color: #ffffff;
+}
+
+.primary-bg:hover {
+  background-color: #c37453;
+}
+
+.attribute {
+  margin: 1em auto;
+  width: calc(80% - 2em);
+  text-align: center;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #4c2010;
+}
+
+.attr-title {
+  text-transform: uppercase;
+  color: #c37453;
+  font-size: medium;
+  font-weight: 300;
+  padding: 0.5em 0;
+}
+
+.attr-description {
+  font-size: x-large;
+  font-weight: 300;
+  color: #0e0405;
+}
+
+.description {
+  font-weight: medium;
+  padding: 1em;
+}
+
+.light-default-text {
+  color: #ffffff;
+}
+
+.feature-img,
+.feature-img2 {
+  display: block;
+  width: 50%;
+  height: 400px;
+}
+
+.feature-img {
+  background-image: url("../img/wine_opener.jpeg");
+}
+
+.feature-img2 {
+  background-image: url("../img/wine_opener2.jpg");
+}
+
+.feature-description {
+  width: calc(50% - 2em);
+  padding: 1em 2em 1em 0;
+}
+
+.feature-description-opp {
+  width: calc(50% - 2em);
+  padding: 1em 0em 1em 2em;
+}
+
+.more-feature {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1em auto;
+  width: calc(80% - 2em);
+}
+
+.hidden {
+  display: none;
+}
+
+.slide_left {
+  animation: slideLeft;
+}
+
+.slide_right {
+  animation: slideRight;
+}
+
+.fade_in {
+  animation: fadeIn;
+}
+
+.slide_left,
+.slide_right,
+.fade_in {
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    margin-right: -1000px;
+  }
+  to {
+    margin-right: 0;
+  }
+}
+@keyframes slideRight {
+  from {
+    margin-left: -1000px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
