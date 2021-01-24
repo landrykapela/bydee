@@ -4,11 +4,14 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
 }
 
 .logo {
   width: 10%;
-  padding: 0.5em 1em;
+  padding: 0.5em 1em 0.5em 0;
 }
 
 header {
@@ -16,8 +19,40 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  background-color: #0e0405;
+  color: #d28b8b;
+  margin: 0 auto;
+}
+
+header,
+main,
+footer {
   padding: 0.5em 1em;
   width: calc(100% - 2em);
+}
+
+footer {
+  padding-bottom: 2em;
+}
+
+footer > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+footer > div span {
+  padding-top: 0.25em;
+  color: #c37453;
 }
 
 .top-nav {
@@ -47,13 +82,15 @@ header {
   text-transform: uppercase;
 }
 
+.button#btn-store {
+  margin: 2em auto;
+}
+
 #home_contact {
   text-transform: unset;
 }
 
 main {
-  padding: 0.5em 1em;
-  width: calc(100% - 2em);
   margin: 0 auto;
 }
 
@@ -79,11 +116,11 @@ main {
 .overlay-feature,
 .feature-product {
   height: 500px;
-  width: calc(100% - 2em);
+  width: 100%;
 }
 
-.overlay-feature {
-  width: calc(100% - 5em);
+.center-text {
+  text-align: center;
 }
 
 .big-text {
@@ -161,13 +198,27 @@ main {
   padding: 1em 0em 1em 2em;
 }
 
-.more-feature {
+.more-feature,
+.other-products {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 1em auto;
+  margin: 2em auto;
   width: calc(80% - 2em);
+}
+
+.other-products .other-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em;
+  width: calc(25% - 1em);
+}
+
+.other-products .other-item img {
+  width: 100%;
 }
 
 .hidden {
@@ -191,8 +242,26 @@ main {
 .fade_in {
   animation-duration: 0.8s;
   animation-timing-function: linear;
-  animation-delay: 1s;
+  animation-delay: 5s;
+  animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+
+a:link,
+a:active,
+a:visited {
+  color: #c37453;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social-icon {
+  width: 30px;
+  margin: 0.5em;
 }
 
 @keyframes slideLeft {

@@ -12,25 +12,53 @@ $maxWidth: 1279px;
   flex-direction: $dir;
   justify-content: $jc;
   align-items: $ai;
-  @if $wrap == 1 {
-    max-width: $maxWidth;
-    flex-wrap: wrap;
-  }
+  // @if $wrap == 1 {
+  //   max-width: $maxWidth;
+  //   flex-wrap: wrap;
+  // }
 }
 html {
   scroll-behavior: smooth;
 }
 body {
   font-family: "Montserrat", sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  // text-align: center;
 }
 .logo {
   width: 10%;
-  padding: 0.5em 1em;
+  padding: 0.5em 1em 0.5em 0;
 }
 header {
   @include flex(row, space-between, center, 0);
+
+  // background-color: $secondaryDarkColor;
+  margin: 0 auto;
+}
+footer {
+  @include flex(row, space-evenly, flex-start, 1);
+  background-color: $secondaryDarkColor;
+  color: $primaryColor;
+  margin: 0 auto;
+  // border: 1px solid red;
+}
+header,
+main,
+footer {
   padding: 0.5em 1em;
   width: calc(100% - 2em);
+}
+footer {
+  padding-bottom: 2em;
+}
+footer > div {
+  @include flex(column, flex-start, flex-start, 0);
+}
+footer > div span {
+  padding-top: 0.25em;
+  color: $primaryDarkColor;
 }
 .top-nav {
   @include flex(row, space-evenly, center, 0);
@@ -52,12 +80,13 @@ header {
   cursor: pointer;
   text-transform: uppercase;
 }
+.button#btn-store {
+  margin: 2em auto;
+}
 #home_contact {
   text-transform: unset;
 }
 main {
-  padding: 0.5em 1em;
-  width: calc(100% - 2em);
   margin: 0 auto;
 }
 .feature-product {
@@ -76,10 +105,10 @@ main {
 .overlay-feature,
 .feature-product {
   height: 500px;
-  width: calc(100% - 2em);
+  width: 100%;
 }
-.overlay-feature {
-  width: calc(100% - 5em);
+.center-text {
+  text-align: center;
 }
 .big-text {
   font-size: xx-large;
@@ -143,10 +172,20 @@ main {
   width: calc(50% - 2em);
   padding: 1em 0em 1em 2em;
 }
-.more-feature {
+.more-feature,
+.other-products {
   @include flex(row, center, center, 0);
-  margin: 1em auto;
+  margin: 2em auto;
   width: calc(80% - 2em);
+}
+
+.other-products .other-item {
+  @include flex(column, center, center, 0);
+  margin: 0.5em;
+  width: calc(25% - 1em);
+}
+.other-products .other-item img {
+  width: 100%;
 }
 .hidden {
   display: none;
@@ -165,8 +204,23 @@ main {
 .fade_in {
   animation-duration: 0.8s;
   animation-timing-function: linear;
-  animation-delay: 1s;
+  animation-delay: 5s;
+  animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+a:link,
+a:active,
+a:visited {
+  color: $primaryDarkColor;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+.social-icon {
+  width: 30px;
+  margin: 0.5em;
 }
 @keyframes slideLeft {
   from {
