@@ -10,6 +10,7 @@ body {
 }
 
 .logo {
+  cursor: pointer;
   width: 10%;
   padding: 0.5em 1em 0.5em 0;
 }
@@ -82,7 +83,7 @@ footer > div span {
   text-transform: uppercase;
 }
 
-.button#btn-store {
+.button#btn_catalog {
   margin: 2em auto;
 }
 
@@ -99,9 +100,10 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("../img/wine.jpg");
+  background-image: url("../img/cin_cin_wide2.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+  width: calc(100% +1em);
 }
 
 .feature-product > span {
@@ -111,12 +113,12 @@ main {
 .overlay-feature {
   position: absolute;
   background-color: #0e04058a;
+  width: 100%;
 }
 
 .overlay-feature,
 .feature-product {
   height: 500px;
-  width: 100%;
 }
 
 .center-text {
@@ -177,15 +179,20 @@ main {
 .feature-img2 {
   display: block;
   width: 50%;
-  height: 400px;
+  height: 480px;
 }
 
 .feature-img {
-  background-image: url("../img/wine_opener.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.feature-img2 {
-  background-image: url("../img/wine_opener2.jpg");
+#feature-img2 {
+  background-image: url("../img/cin_cin_verseur.jpeg");
+}
+
+#feature-img {
+  background-image: url("../img/cin_cin_set_sq.jpeg");
 }
 
 .feature-description {

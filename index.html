@@ -21,69 +21,77 @@
   </head>
   <body>
     <header>
-      <img src="img/bydee logo.png" alt="By Dee logo" class="logo" />
+      <img src="img/bydee logo.png" alt="By Dee logo" class="logo"
+      onclick="window.location.pathname ='/';"" />
       <nav id="top-nav" class="top-nav">
-        <span id="store">Store</span>
-        <span id="about">About</span>
-        <span id="deals">Deals</span>
+        <span id="catalog">Catalogue</span>
+        <span id="about">A Propos</span>
+        <span id="deals">Offres</span>
       </nav>
-      <div class="button primary-bg" id="home_contact">Contact Us</div>
+
+      <div class="button primary-bg" id="home_contact">Contacter</div>
     </header>
-    <main>
+    <main id="home_main">
       <div class="feature-product">
         <div class="overlay-feature"></div>
-        <span class="big-text light-default-text">
-          Your feature product tag line here</span
+        <span class="big-text light-default-text" id="feature_headline">
+          CINCIN By Dee tire-bouchon électrique</span
         >
-        <span class="description light-default-text"
-          >One or two lines of description here</span
+        <span class="description light-default-text" id="feature_tagline"
+          >Plus besoin de forcer pour déboucher vos meilleures bouteilles grâce
+          à ce nouveau tire-bouchon électrique</span
         >
-        <span class="button primary-bg">BUY NOW</span>
+        <span class="button primary-bg" id="btn_buy">Acheter</span>
       </div>
       <div class="attribute">
-        <span class="attr-title">SIMPLE TO USE</span>
-        <p class="attr-description">
-          A very short description of the advantage you get by using this
-          product. It can be two to three lines. Do not put a very long
-          description here it might not look as good as desired.
+        <span class="attr-title">CINCIN By Dee </span>
+        <p class="attr-description" id="attr-description">
+          Plus besoin de forcer pour déboucher vos meilleures bouteilles grâce à
+          ce nouveau tire-bouchon électrique - CINCIN By Dee! CINCIN edt
+          élégant, pratique et tellement facile a utiliser. Et en plus, il est
+          équipé d'un coupe-capsule, un verseur de vin, un bouchon à vin sous
+          vide et un tire-bouchon électrique
         </p>
       </div>
       <div class="more-feature" id="more-feature">
-        <div id="feature-description" class="feature-description slide_right">
-          <span class="attr-title">Feature Heading</span>
-          <p class="attr-description">
-            Here is a description of a cool feature of this product. It should
-            basically be a one or two paragraphs with not more than 300
-            characters
+        <div id="feature-description" class="feature-description">
+          <span class="attr-title" id="attr-title1">Opération Simple</span>
+          <p class="attr-description" id="attr-description1">
+            Lorsque vous essayez d'ouvrir le bouchon de la bouteille
+            manuellement, vous pouvez rencontrer la situation où le bouchon se
+            fissure ou les copeaux de bois tombent dans la bouteille. Appuyez
+            sur le bouton du bouchon du flacon jusqu'à ce que le bouchon du
+            flacon soit libéré. Après avoir retiré, appuyez sur le bouton
+            arrière du bouchon jusqu'à ce que le bouchon soit retiré.
           </p>
-          <div class="button primary-bg">Buy Now</div>
+          <div class="button primary-bg" id="btn_buy1">Acheter</div>
         </div>
         <div id="feature-img" class="feature-img"></div>
       </div>
       <div class="more-feature" id="more-feature2">
-        <div id="feature-img" class="feature-img2"></div>
-        <div
-          id="feature-description"
-          class="feature-description-opp slide_left"
-        >
-          <span class="attr-title">Another Feature Heading</span>
-          <p class="attr-description">
-            Here is a description of a cool feature of this product. It should
-            basically be a one or two paragraphs with not more than 300
-            characters
+        <div id="feature-img2" class="feature-img"></div>
+        <div id="feature-description" class="feature-description-opp">
+          <span class="attr-title" id="attr-title2">Coupe-Feuille</span>
+          <p class="attr-description" id="attr-description2">
+            Le coupe-feuille vous aide à retirer facilement et rapidement la
+            feuille d'étain scellée. Placez simplement le coupe-papier
+            verticalement sur le joint de la bouteille et faites-le pivoter pour
+            retirer la feuille d'étain d'étanchéité.
           </p>
-          <div class="button primary-bg">Buy Now</div>
+          <div class="button primary-bg" id="btn_buy2">Acheter</div>
         </div>
       </div>
-      <p class="big-text center-text">More from our catalog</p>
+      <p class="big-text center-text" id="big-text">
+        Pluis de Produits de Notre Catalogue
+      </p>
       <div class="other-products">
         <div class="other-item">
-          <img src="img/wine.jpg" alt="product name" />
-          <span class="attr-title"><a href="">Product One</a></span>
+          <img src="img/boob_lift_roll.jpeg" alt="Boob Lift" />
+          <span class="attr-title"><a href="">Boob Lift</a></span>
         </div>
         <div class="other-item">
-          <img src="img/wine.jpg" alt="product name" />
-          <span class="attr-title"><a href="">Product Two</a></span>
+          <img src="img/boob_lift_rolls.jpeg" alt="boob lift rolls" />
+          <span class="attr-title"><a href="">Boob Lift Rolls</a></span>
         </div>
         <div class="other-item">
           <img src="img/wine.jpg" alt="product name" />
@@ -94,12 +102,12 @@
           <span class="attr-title"><a href="">Product Four</a></span>
         </div>
       </div>
-      <div class="button primary-bg" id="btn-store">Store</div>
+      <div class="button primary-bg" id="btn_catalog">Catalogue</div>
     </main>
     <footer>
       <div>
         <p>Links</p>
-        <a href="">Store</a>
+        <a href="">Catalogue</a>
         <a href="">About</a>
         <a href="">Deals</a>
         <a href="">Contact</a>
@@ -111,13 +119,13 @@
       </div>
       <div>
         <p>Address</p>
-        <span>Company Name</span>
-        <span>Physical Address</span>
-        <span>+255 00 000 000</span>
+        <span>By Dee</span>
+        <span>Gombe, Kinshasa</span>
+        <span>+243995216651</span>
       </div>
       <div>
         <span>
-          <a href=""
+          <a target="_blank" href="https://www.instagram.com/made__bydee/?hl=en"
             ><img class="social-icon" src="img/instagram.png" alt="Instagram"
           /></a>
           <a href=""
@@ -129,8 +137,15 @@
               src="img/facebook.png"
               alt="Facebook" /></a
         ></span>
+        <select id="eng">
+          <option value="0">English</option>
+          <option value="1" selected>Francais</option>
+        </select>
       </div>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/eng.js"></script>
+    <script src="js/fr.js"></script>
+    <script src="js/lang.js"></script>
   </body>
 </html>

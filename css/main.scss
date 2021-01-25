@@ -28,6 +28,7 @@ body {
   // text-align: center;
 }
 .logo {
+  cursor: pointer;
   width: 10%;
   padding: 0.5em 1em 0.5em 0;
 }
@@ -73,6 +74,7 @@ footer > div span {
   color: $primaryColor;
   border-bottom: 1px solid $primaryColor;
 }
+
 .button {
   width: 100px;
   padding: 0.5em 1em;
@@ -80,7 +82,7 @@ footer > div span {
   cursor: pointer;
   text-transform: uppercase;
 }
-.button#btn-store {
+.button#btn_catalog {
   margin: 2em auto;
 }
 #home_contact {
@@ -91,9 +93,10 @@ main {
 }
 .feature-product {
   @include flex(column, center, center, 0);
-  background-image: url("../img/wine.jpg");
+  background-image: url("../img/cin_cin_wide2.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+  width: calc(100% +1em);
 }
 .feature-product > span {
   z-index: 9999999999999;
@@ -101,11 +104,11 @@ main {
 .overlay-feature {
   position: absolute;
   background-color: $secondaryDarkTrans;
+  width: 100%;
 }
 .overlay-feature,
 .feature-product {
   height: 500px;
-  width: 100%;
 }
 .center-text {
   text-align: center;
@@ -155,13 +158,17 @@ main {
 .feature-img2 {
   display: block;
   width: 50%;
-  height: 400px;
+  height: 480px;
 }
 .feature-img {
-  background-image: url("../img/wine_opener.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.feature-img2 {
-  background-image: url("../img/wine_opener2.jpg");
+#feature-img2 {
+  background-image: url("../img/cin_cin_verseur.jpeg");
+}
+#feature-img {
+  background-image: url("../img/cin_cin_set_sq.jpeg");
 }
 .feature-description {
   width: calc(50% - 2em);
@@ -222,6 +229,7 @@ a:hover {
   width: 30px;
   margin: 0.5em;
 }
+
 @keyframes slideLeft {
   from {
     margin-right: -1000px;
